@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-image: url('project.jpg');
+      background-size: cover;
+      background-position: center;
+      transition: filter 0.3s; /* Add transition for smoother effect */
+    }
+
+    h1 {
+      margin-top: 20px;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 0; /* Pushes the container to the center vertically */
+    }
+
+    .container button {
+      border: none;
+      background-color: rgb(17, 211, 221);
+      padding: 15px 5px;
+      text-align: center;
+      text-decoration: none;
+      display: block; /* Display buttons as block elements */
+      width: 100%; /* Make buttons take full width */
+      font-size: 16px;
+      margin: 10px 0; /* Adjust margin for space between buttons */
+      cursor: pointer;
+      border-radius: 5px;
+      transition: transform 0.7s; /* Add transition for smoother scaling */
+    }
+
+    .container button:hover {
+      background-color: red;
+      transform: scale(1.1); /* Scale up the button on hover */
+    }
+
+      
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <button type="button"><a href="./bp.html" style="text-decoration: none; color: black;"><b>Check BP</b></a></button>
+    <button type="button"><a href="./bmi.html" style="text-decoration: none; color: black;"><b>Check BMI(Body Mass Index)</b> </a></button>
+    <button type="button"><a href="./sugar.html" style="text-decoration: none; color: black;"><b>Check Sugar</b></a></button>
+  </div>
+</body>
+
+</html>

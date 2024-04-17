@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f0f0; /* Light gray background */
+            color: #333; /* Dark gray text color */
+            margin: 0; /* Remove default margin */
+        }
+
+        .top-text {
+            max-width: 800px;
+            text-align: center;
+            margin-bottom: 10px; /* Adjusted margin */
+        }
+
+        .container1 {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+            max-width: 400px;
+            text-align: center;
+        }
+
+        button {
+            border: none;
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth background transition */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button,
+        input[type="number"] {
+            outline: none; /* Remove default outline on focus */
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4); /* Black background with transparency */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top text explaining BMI -->
+    <div class="top-text" style="margin: 0 auto; max-width: 800px; text-align: left;">
+        <h2>BMI stands for Body Mass Index. It's a measure used to assess an individual's body weight in relation to their height.</h2>
+        <p>BMI is calculated by dividing a person's weight in kilograms by the square of their height in meters.</p>
+        <p>The following are the BMI categories:</p>
+        <ul>
+            <li>BMI below 18.5: Underweight</li>
+            <li>BMI 18.5 - 24.9: Normal weight</li>
+            <li>BMI 25.0 - 29.9: Overweight</li>
+            <li>BMI 30.0 and above: Obesity</li>
+        </ul>
+    </div>
+
+    <!-- Button for Main Menu -->
+    <div>
+        <button><a href="./index.html">Main Menu</a></button>
+    </div>
+
+    <!-- BMI Calculator Container -->
+    <div class="container1">
+        <h1 style="color: #333;">BMI Calculator</h1>
+        <label for="weight" style="color: #333;">Weight (kg):</label>
+        <input type="number" id="weight" required />
+        <br>
+        <label for="height" style="color: #333;">Height (cm):</label>
+        <input type="number" id="height" required />
+        <br>
+        <button onclick="checkBmi()">Calculate BMI</button>
+    </div>
+
+    <!-- Modal for displaying BMI result -->
+    <div class="modal" id="resultModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your BMI Result</h2>
+            <p id="bmiResult"></p>
+            <p id="bmiSuggestion"></p>
+            <button id="closeModal">OK</button>
+        </div>
+    </div>
+
+    <!-- JavaScript files -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Include SweetAlert JS -->
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blood Pressure Checker</title>
+  <link rel="styleSheet" href="./styles.css" />
+  <script src="./script.js"></script>
+
+  <!-- Include SweetAlert CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"/>
+
+
+</head>
+
+<body>
+  <div>
+   <button><a href="./index.html">Main Menu</a></button>
+  </div>
+  <h1>Blood Pressure Checker</h1>
+  <div>
+    Understanding your blood pressure reading Blood pressure is measured in millimetres of mercury (mmHg) and is given
+    as two figures:
+    <ul>
+      <li><strong>systolic pressure</strong>&nbsp;–&nbsp;the pressure&nbsp;when your heart pushes blood out</li>
+      <li><strong>diastolic pressure</strong>&nbsp;– the pressure when your heart rests between beats</li>
+    </ul>
+    <p>For example, if your blood pressure is "140 over 90" or 140/90mmHg, it means you have a systolic pressure of
+      140mmHg and a diastolic pressure of 90mmHg.</p>
+  </div>
+  <div class="container">
+    <form class="formData">
+      <label for="systolic">Systolic Pressure (mmHg):</label>
+      <input type="number" placeholder="Systolic Pressure" id="systolic" required />
+      <br />
+      <label for="diastolic">Diastolic Pressure (mmHg):</label>
+      <input type="number" placeholder="Diastolic Pressure" id="diastolic" required />
+      <br />
+      <button class="submitBtn" type="button" onclick="checkBloodPressure()">Submit</button>
+    </form>
+    <div>
+      <img src="https://www.28beaumontstreet.co.uk/media/content/images/bp-range-chart.jpg" alt="Blood" />
+    </div>
+  </div>
+  <!-- Includeda SweetAlert JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
